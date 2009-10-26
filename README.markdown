@@ -6,4 +6,4 @@ or apply them to an existing app:
 
     rake rails:template LOCATION=~/simple-startup-template.rb
 
-See http://m.onkey.org/2008/12/4/rails-templates for more info.
+See [Rails Templates](http://m.onkey.org/2008/12/4/rails-templates) for more info.
