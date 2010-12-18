@@ -1,7 +1,8 @@
-gem 'thoughtbot-shoulda', :lib => 'shoulda/rails', :source => 'http://gems.github.com', :env => "test"
-gem 'thoughtbot-factory_girl', :lib => 'factory_girl', :source => "http://gems.github.com", :env => "test"
-gem 'flexmock',  :env => "test"
-gem 'brynary-webrat', :lib => 'webrat', :source => "http://gems.github.com", :env => "test"
+gem 'shoulda', :lib => 'shoulda/rails', :env => "test"
+gem 'factory_girl', :env => "test"
+gem 'flexmock', :lib => 'flexmock/test_unit',  :env => "test"
+gem 'webrat', :env => "test"
+gem 'holygrail', :env => "test"
 
 append_file(".gitignore", "webrat*html")
 
@@ -14,4 +15,6 @@ rake "gems:unpack", :env => "test"
 
 git :add => "config/environments/test.rb"
 git :add => "vendor/gems"
+git :add => ".gitignore"
+git :add => "test/test_helper.rb"
 git :commit => "-m 'Adding shoulda, factory_girl, flexmock, and webrat'" if yes?("Commit change?")
